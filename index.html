@@ -8,603 +8,477 @@
   body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    color: #333;
-    padding: 20px;
+    min-height: 100vh; color: #333; padding: 20px;
   }
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    padding: 40px;
-    min-height: 80vh;
+    max-width: 1100px; margin: 0 auto; background: #fff;
+    border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px; min-height: 80vh;
   }
-  h1 {
-    text-align: center;
-    color: #764ba2;
-    margin-bottom: 10px;
-    font-size: 2.2em;
-  }
-  h2 {
-    color: #667eea;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .subtitle {
-    text-align: center;
-    color: #777;
-    margin-bottom: 30px;
-    font-size: 1.1em;
-  }
+  h1 { text-align: center; color: #764ba2; margin-bottom: 10px; font-size: 2.2em; }
+  h2 { color: #667eea; margin: 20px 0 15px; text-align: center; }
+  h3 { color: #764ba2; margin: 15px 0 10px; }
+  .subtitle { text-align: center; color: #777; margin-bottom: 30px; font-size: 1.1em; }
   .menu-btn {
-    display: block;
-    width: 80%;
-    margin: 20px auto;
-    padding: 25px;
-    font-size: 1.3em;
-    border: none;
-    border-radius: 15px;
+    display: block; width: 80%; margin: 20px auto; padding: 25px;
+    font-size: 1.3em; border: none; border-radius: 15px;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
+    color: #fff; cursor: pointer; transition: all 0.3s;
     box-shadow: 0 5px 15px rgba(102,126,234,0.4);
   }
-  .menu-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(102,126,234,0.6);
+  .menu-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(102,126,234,0.6); }
+  .menu-btn.secondary { background: linear-gradient(135deg, #f093fb, #f5576c); box-shadow: 0 5px 15px rgba(245,87,108,0.4); }
+  .menu-btn.theory { background: linear-gradient(135deg, #11998e, #38ef7d); box-shadow: 0 5px 15px rgba(17,153,142,0.4); }
+  .menu-btn.small { width: auto; padding: 12px 25px; font-size: 1em; display: inline-block; margin: 5px; }
+  .menu-btn.exit {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    box-shadow: 0 5px 15px rgba(238,90,111,0.4);
+    padding: 10px 20px; font-size: 0.95em; width: auto; display: inline-block; margin: 0;
   }
-  .menu-btn.secondary {
-    background: linear-gradient(135deg, #f093fb, #f5576c);
-    box-shadow: 0 5px 15px rgba(245,87,108,0.4);
-  }
-  .progress {
-    text-align: center;
-    font-size: 1.2em;
-    color: #667eea;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
+  .progress { text-align: center; font-size: 1.2em; color: #667eea; margin-bottom: 20px; font-weight: bold; }
+  .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
   .problem-text {
-    background: #f8f9ff;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    font-size: 1.05em;
-    line-height: 1.6;
-    border-left: 5px solid #667eea;
+    background: #f8f9ff; padding: 20px; border-radius: 12px; margin-bottom: 20px;
+    font-size: 1.05em; line-height: 1.6; border-left: 5px solid #667eea;
   }
   table.matrix {
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    margin: 15px auto; border-collapse: collapse; background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden;
   }
   table.matrix th, table.matrix td {
-    padding: 12px 18px;
-    text-align: center;
-    border: 1px solid #e0e0e0;
-    min-width: 50px;
-    font-size: 1.1em;
+    padding: 10px 15px; text-align: center; border: 1px solid #e0e0e0;
+    min-width: 45px; font-size: 1.05em;
   }
-  table.matrix th {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    font-weight: bold;
-  }
-  table.matrix td.header {
-    background: #f0f2ff;
-    font-weight: bold;
-    color: #764ba2;
-  }
-  table.matrix td.empty {
-    background: #fafafa;
-    color: #ccc;
-  }
-  .answer-section {
-    text-align: center;
-    margin: 30px 0;
-  }
+  table.matrix th { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; font-weight: bold; }
+  table.matrix td.header { background: #f0f2ff; font-weight: bold; color: #764ba2; }
+  table.matrix td.empty { background: #fafafa; color: #ccc; }
+  .answer-section { text-align: center; margin: 25px 0; }
   .answer-input {
-    padding: 15px 25px;
-    font-size: 1.3em;
-    border: 2px solid #667eea;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    outline: none;
+    padding: 12px 20px; font-size: 1.2em; border: 2px solid #667eea;
+    border-radius: 10px; width: 180px; text-align: center; outline: none;
   }
-  .answer-input:focus {
-    border-color: #764ba2;
-    box-shadow: 0 0 10px rgba(118,75,162,0.3);
-  }
+  .answer-input:focus { border-color: #764ba2; box-shadow: 0 0 10px rgba(118,75,162,0.3); }
+  .answer-input:disabled { background: #f0f0f0; cursor: not-allowed; color: #888; }
   .submit-btn {
-    padding: 15px 40px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 10px;
+    padding: 12px 30px; font-size: 1.1em; border: none; border-radius: 10px;
     background: linear-gradient(135deg, #11998e, #38ef7d);
-    color: #fff;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: all 0.3s;
+    color: #fff; cursor: pointer; margin-left: 10px; transition: all 0.3s;
   }
-  .submit-btn:hover { transform: scale(1.05); }
+  .submit-btn:hover:not(:disabled) { transform: scale(1.05); }
+  .submit-btn:disabled { background: #ccc; cursor: not-allowed; }
   .feedback {
-    text-align: center;
-    font-size: 1.3em;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
+    text-align: center; font-size: 1.2em; margin: 20px 0; padding: 15px;
+    border-radius: 10px; font-weight: bold;
   }
-  .feedback.correct {
-    background: #d4edda;
-    color: #155724;
-    border: 2px solid #28a745;
-  }
-  .feedback.wrong {
-    background: #f8d7da;
-    color: #721c24;
-    border: 2px solid #dc3545;
-  }
+  .feedback.correct { background: #d4edda; color: #155724; border: 2px solid #28a745; }
+  .feedback.wrong { background: #f8d7da; color: #721c24; border: 2px solid #dc3545; }
+  .feedback.accepted { background: #e3f2fd; color: #1565c0; border: 2px solid #2196f3; }
   .next-btn {
-    padding: 12px 35px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 10px;
+    padding: 12px 35px; font-size: 1.1em; border: none; border-radius: 10px;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    cursor: pointer;
-    margin-top: 15px;
+    color: #fff; cursor: pointer; margin-top: 15px;
   }
-  .result-screen {
-    text-align: center;
-    padding: 40px 20px;
+  .retry-btn {
+    padding: 12px 35px; font-size: 1.1em; border: none; border-radius: 10px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff; cursor: pointer; margin-top: 15px;
   }
+  .result-screen { text-align: center; padding: 40px 20px; }
   .result-grade {
-    font-size: 8em;
-    font-weight: bold;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 20px 0;
-    animation: pop 0.6s ease-out;
+    font-size: 8em; font-weight: bold;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; margin: 20px 0; animation: pop 0.6s ease-out;
   }
   @keyframes pop {
-    0% { transform: scale(0); }
-    70% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% { transform: scale(0); } 70% { transform: scale(1.2); } 100% { transform: scale(1); }
   }
-  .result-percent {
-    font-size: 2.5em;
-    color: #333;
-    margin: 20px 0;
+  .result-percent { font-size: 2.5em; color: #333; margin: 20px 0; }
+  .result-student {
+    font-size: 1.4em; color: #764ba2; margin: 15px 0; padding: 18px 25px;
+    background: #f8f9ff; border-radius: 12px; display: inline-block;
+    border: 2px solid #e0e0ff;
   }
-  .result-details {
-    font-size: 1.3em;
-    color: #555;
-    margin: 10px 0;
+  .result-student .variant-badge {
+    display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff; padding: 6px 18px; border-radius: 20px; font-size: 0.95em;
+    margin-left: 10px; font-weight: bold;
   }
-  .result-list {
-    text-align: left;
-    max-width: 600px;
-    margin: 30px auto;
-    background: #f8f9ff;
-    padding: 20px;
-    border-radius: 12px;
-  }
-  .result-list-item {
-    padding: 8px 15px;
-    margin: 5px 0;
-    border-radius: 6px;
-    font-size: 1.05em;
-  }
-  .result-list-item.ok { background: #d4edda; color: #155724; }
-  .result-list-item.fail { background: #f8d7da; color: #721c24; }
   .grade-5 { color: #28a745 !important; -webkit-text-fill-color: #28a745 !important; }
   .grade-4 { color: #17a2b8 !important; -webkit-text-fill-color: #17a2b8 !important; }
   .grade-3 { color: #ffc107 !important; -webkit-text-fill-color: #ffc107 !important; }
   .grade-2 { color: #dc3545 !important; -webkit-text-fill-color: #dc3545 !important; }
   .hidden { display: none; }
-  .stats {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0;
-    flex-wrap: wrap;
-  }
+  .stats { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; }
   .stat-box {
     background: linear-gradient(135deg, #f093fb, #f5576c);
-    color: #fff;
-    padding: 20px 30px;
-    border-radius: 15px;
-    min-width: 150px;
-    margin: 10px;
-    box-shadow: 0 5px 15px rgba(245,87,108,0.3);
+    color: #fff; padding: 20px 30px; border-radius: 15px;
+    min-width: 150px; margin: 10px; box-shadow: 0 5px 15px rgba(245,87,108,0.3);
   }
   .stat-box .num { font-size: 2.5em; font-weight: bold; }
   .stat-box .label { font-size: 0.95em; opacity: 0.9; }
+  .stat-box.attempts { background: linear-gradient(135deg, #667eea, #764ba2); box-shadow: 0 5px 15px rgba(102,126,234,0.3); }
+  .stat-box.variant-stat { background: linear-gradient(135deg, #f093fb, #f5576c); box-shadow: 0 5px 15px rgba(245,87,108,0.3); }
+
+  .graph-editor {
+    background: #f8f9ff; border: 2px dashed #667eea; border-radius: 12px;
+    padding: 15px; margin: 15px 0;
+  }
+  .graph-editor canvas {
+    background: #fff; border-radius: 8px; cursor: crosshair;
+    display: block; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .graph-toolbar { text-align: center; margin: 10px 0; }
+  .graph-toolbar button {
+    padding: 8px 18px; margin: 3px; border: none; border-radius: 8px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff; cursor: pointer; font-size: 0.95em; transition: all 0.2s;
+  }
+  .graph-toolbar button:hover { transform: scale(1.05); }
+  .graph-toolbar button.active { background: linear-gradient(135deg, #11998e, #38ef7d); }
+  .graph-toolbar button.danger { background: linear-gradient(135deg, #f5576c, #f093fb); }
+  .graph-hint { text-align: center; color: #666; font-size: 0.9em; margin: 8px 0; font-style: italic; }
+
+  .theory-content { line-height: 1.7; font-size: 1.05em; }
+  .theory-content p { margin: 12px 0; }
+  .theory-content .example {
+    background: #fff8e1; border-left: 4px solid #ffc107;
+    padding: 15px 20px; margin: 15px 0; border-radius: 8px;
+  }
+  .theory-content ul, .theory-content ol { margin: 10px 0 10px 30px; }
+  .theory-content li { margin: 6px 0; }
+  .theory-content .step {
+    background: #f0f8ff; padding: 10px 15px; margin: 8px 0;
+    border-radius: 6px; border-left: 3px solid #667eea;
+  }
+
+  .reg-form {
+    max-width: 500px; margin: 30px auto; background: #f8f9ff;
+    padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+  .reg-form label { display: block; margin: 15px 0 5px; font-weight: bold; color: #764ba2; }
+  .reg-form input, .reg-form select {
+    width: 100%; padding: 12px; font-size: 1em; border: 2px solid #e0e0e0;
+    border-radius: 8px; outline: none; transition: border 0.2s;
+  }
+  .reg-form input:focus, .reg-form select:focus { border-color: #667eea; }
+
+  /* Карточки выбора варианта */
+  .variant-cards {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
+    margin: 20px 0;
+  }
+  .variant-card {
+    padding: 25px 15px; border: 3px solid #e0e0e0; border-radius: 15px;
+    background: #fff; cursor: pointer; transition: all 0.3s; text-align: center;
+  }
+  .variant-card:hover {
+    border-color: #667eea; transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102,126,234,0.2);
+  }
+  .variant-card.selected {
+    border-color: #764ba2; background: linear-gradient(135deg, #f8f9ff, #e8e8ff);
+    box-shadow: 0 8px 25px rgba(118,75,162,0.3);
+  }
+  .variant-card .v-num {
+    font-size: 2.5em; font-weight: bold;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .variant-card .v-label { font-size: 0.95em; color: #666; margin-top: 5px; }
+
+  .modal-overlay {
+    display: none; position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.6);
+    z-index: 1000; justify-content: center; align-items: center;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: #fff; padding: 35px 40px; border-radius: 20px;
+    max-width: 450px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    text-align: center; animation: modalPop 0.3s ease-out;
+  }
+  @keyframes modalPop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .modal-box h3 { color: #764ba2; margin-bottom: 15px; font-size: 1.4em; }
+  .modal-box p { color: #555; margin-bottom: 25px; line-height: 1.5; }
+  .modal-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+  .modal-buttons button {
+    padding: 12px 28px; font-size: 1em; border: none; border-radius: 10px;
+    cursor: pointer; font-weight: bold; transition: all 0.2s;
+  }
+  .modal-buttons button:hover { transform: scale(1.05); }
+  .btn-confirm { background: linear-gradient(135deg, #ff6b6b, #ee5a6f); color: #fff; }
+  .btn-cancel { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; }
+
+  .mode-indicator {
+    display: inline-block; padding: 6px 16px; border-radius: 20px;
+    font-size: 0.9em; font-weight: bold; margin-bottom: 10px;
+  }
+  .mode-indicator.training { background: #e8f5e9; color: #2e7d32; }
+  .mode-indicator.test { background: #fff3e0; color: #e65100; }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- Главное меню -->
   <div id="menu">
     <h1>🎓 Тренажёр ОГЭ — Графы</h1>
-    <p class="subtitle">Задание №9 / №10 — Анализ информационных моделей (графы)</p>
+    <p class="subtitle">Задание №9 / №10 — Анализ информационных моделей</p>
     <h2>Выберите режим работы</h2>
+    <button class="menu-btn theory" onclick="showTheory()">📖 Теоретический материал</button>
     <button class="menu-btn" onclick="startTraining()">📚 Тренировка (40 заданий)</button>
-    <button class="menu-btn secondary" onclick="startTest()">📝 Итоговый тест (10 заданий)</button>
+    <button class="menu-btn secondary" onclick="showRegistration()">📝 Итоговый тест (10 заданий)</button>
     <p class="subtitle" style="margin-top:40px; font-size:0.95em;">
       Оценивание: 90–100% → 5 | 75–89% → 4 | 50–74% → 3 | &lt;50% → 2
     </p>
   </div>
 
-  <!-- Экран задачи -->
-  <div id="problem-screen" class="hidden">
-    <div class="progress" id="progress">Задание 1 из 40</div>
-    <div class="problem-text" id="problem-text"></div>
-    <div id="matrix-container"></div>
-    <div class="answer-section">
-      <input type="number" class="answer-input" id="answer-input" placeholder="Ответ">
-      <button class="submit-btn" onclick="checkAnswer()">Проверить</button>
+  <div id="theory-screen" class="hidden">
+    <div class="top-bar">
+      <button class="menu-btn exit" onclick="backToMenu()">🏠 В главное меню</button>
     </div>
-    <div id="feedback"></div>
-    <div style="text-align:center;">
-      <button class="next-btn hidden" id="next-btn" onclick="nextProblem()">Далее →</button>
+    <h1>📖 Теоретический материал</h1>
+    <div class="theory-content">
+      <h3>1. Что такое граф?</h3>
+      <p><b>Граф</b> — это математическая модель, состоящая из <b>вершин</b> (точек) и <b>рёбер</b> (линий, соединяющих вершины). В задачах ОГЭ вершинами обычно являются населённые пункты, а рёбрами — дороги между ними.</p>
+      <div class="example">
+        <b>Пример:</b> Если вершины A, B, C — это города, а рёбра — дороги, то граф показывает, между какими городами есть прямое сообщение.
+      </div>
+      <h3>2. Взвешенный граф</h3>
+      <p>Если каждому ребру сопоставлено некоторое число (вес), то граф называется <b>взвешенным</b>. Вес может означать длину дороги в километрах, время в пути, стоимость проезда и т.д.</p>
+      <h3>3. Матрица смежности</h3>
+      <p>Граф можно задать <b>таблицей (матрицей смежности)</b>, где на пересечении строки и столбца указана длина дороги между соответствующими пунктами. Если дороги нет — клетка пуста.</p>
+      <div class="example">
+        <b>Пример матрицы:</b>
+        <table class="matrix" style="margin: 10px auto;">
+          <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+          <tr><td class="header">A</td><td class="empty">—</td><td>3</td><td>7</td></tr>
+          <tr><td class="header">B</td><td>3</td><td class="empty">—</td><td>2</td></tr>
+          <tr><td class="header">C</td><td>7</td><td>2</td><td class="empty">—</td></tr>
+        </table>
+        <p style="text-align:center;">Дороги: A–B = 3, A–C = 7, B–C = 2</p>
+      </div>
+      <h3>4. Кратчайший путь</h3>
+      <p><b>Кратчайший путь</b> — это путь между двумя вершинами, сумма весов рёбер на котором минимальна.</p>
+      <h3>5. Алгоритм Дейкстры</h3>
+      <p>Для нахождения кратчайшего пути применяется <b>алгоритм Дейкстры</b>:</p>
+      <ol>
+        <li>Начальной вершине присваиваем расстояние 0, всем остальным — ∞ (бесконечность).</li>
+        <li>Из ещё не обработанных вершин выбираем ту, у которой минимальное расстояние.</li>
+        <li>Для каждой соседней вершины пересчитываем расстояние: если через текущую вершину путь короче — обновляем.</li>
+        <li>Повторяем, пока не обработаем все вершины или не достигнем целевой.</li>
+      </ol>
+      <h3>6. Разбор задачи №1</h3>
+      <div class="example">
+        <p><b>Условие:</b> Между пунктами A, B, C, D, E построены дороги. Найти длину кратчайшего пути от A до E.</p>
+        <table class="matrix" style="margin: 10px auto;">
+          <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+          <tr><td class="header">A</td><td class="empty">—</td><td>1</td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+          <tr><td class="header">B</td><td>1</td><td class="empty">—</td><td>2</td><td>2</td><td>7</td></tr>
+          <tr><td class="header">C</td><td class="empty"></td><td>2</td><td class="empty">—</td><td class="empty"></td><td>3</td></tr>
+          <tr><td class="header">D</td><td class="empty"></td><td>2</td><td class="empty"></td><td class="empty">—</td><td>4</td></tr>
+          <tr><td class="header">E</td><td class="empty"></td><td>7</td><td>3</td><td>4</td><td class="empty">—</td></tr>
+        </table>
+        <p><b>Решение (пошагово):</b></p>
+        <div class="step"><b>Шаг 1:</b> Старт в A. Расстояния: A=0, остальные=∞</div>
+        <div class="step"><b>Шаг 2:</b> Из A идём в B (расст. 1). B=1</div>
+        <div class="step"><b>Шаг 3:</b> Из B: в C (1+2=3), в D (1+2=3), в E (1+7=8). C=3, D=3, E=8</div>
+        <div class="step"><b>Шаг 4:</b> Из C: в E (3+3=6). E=6 (меньше 8, обновляем)</div>
+        <div class="step"><b>Шаг 5:</b> Из D: в E (3+4=7). E остаётся 6</div>
+        <p><b>Ответ: 6</b> (путь A → B → C → E)</p>
+      </div>
+      <h3>7. Разбор задачи с условием «через пункт»</h3>
+      <div class="example">
+        <p><b>Условие:</b> Найти кратчайший путь от A до E, проходящий через C.</p>
+        <p><b>Решение:</b> Задача разбивается на две:</p>
+        <div class="step">1) Кратчайший путь A → C</div>
+        <div class="step">2) Кратчайший путь C → E</div>
+        <p>Суммируем результаты. В примере выше: A→C = 3, C→E = 3. Ответ: <b>6</b>.</p>
+      </div>
+      <h3>8. Разбор задачи «без повторений»</h3>
+      <div class="example">
+        <p><b>Условие:</b> Каждый пункт можно посетить только один раз.</p>
+        <p><b>Решение:</b> Здесь алгоритм Дейкстры не подходит напрямую — нужно перебирать все возможные пути и выбирать минимальный. Обычно таких путей немного, поэтому перебор выполняется вручную или с помощью дерева вариантов.</p>
+      </div>
+      <h3>💡 Советы для экзамена:</h3>
+      <ul>
+        <li>Всегда рисуйте граф по таблице — так нагляднее!</li>
+        <li>Начинайте перебор путей от начальной вершины.</li>
+        <li>Записывайте все найденные пути и их длины.</li>
+        <li>Если есть условие «через X» — разбейте задачу на две части.</li>
+        <li>Проверяйте, не пропустили ли вы более короткий путь.</li>
+      </ul>
     </div>
   </div>
 
-  <!-- Экран результата -->
+  <div id="registration-screen" class="hidden">
+    <div class="top-bar">
+      <button class="menu-btn exit" onclick="backToMenu()">🏠 В главное меню</button>
+    </div>
+    <h1>📝 Регистрация на тест</h1>
+    <p class="subtitle">Пожалуйста, введите свои данные и выберите вариант тестирования</p>
+    <div class="reg-form">
+      <label>Фамилия:</label>
+      <input type="text" id="reg-lastname" placeholder="Иванов">
+      <label>Имя:</label>
+      <input type="text" id="reg-firstname" placeholder="Иван">
+      <label>Класс:</label>
+      <select id="reg-class">
+        <option value="">-- Выберите класс --</option>
+        <option value="9А">9А</option><option value="9Б">9Б</option>
+        <option value="9В">9В</option><option value="9Г">9Г</option>
+        <option value="9Д">9Д</option><option value="10А">10А</option>
+        <option value="10Б">10Б</option><option value="11А">11А</option>
+        <option value="11Б">11Б</option>
+      </select>
+      <label>Вариант тестирования:</label>
+      <div class="variant-cards">
+        <div class="variant-card" data-variant="1" onclick="selectVariant(1)">
+          <div class="v-num">1</div>
+          <div class="v-label">Вариант 1</div>
+        </div>
+        <div class="variant-card" data-variant="2" onclick="selectVariant(2)">
+          <div class="v-num">2</div>
+          <div class="v-label">Вариант 2</div>
+        </div>
+        <div class="variant-card" data-variant="3" onclick="selectVariant(3)">
+          <div class="v-num">3</div>
+          <div class="v-label">Вариант 3</div>
+        </div>
+        <div class="variant-card" data-variant="4" onclick="selectVariant(4)">
+          <div class="v-num">4</div>
+          <div class="v-label">Вариант 4</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:25px;">
+        <button class="submit-btn" onclick="startTest()">Начать тест →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="problem-screen" class="hidden">
+    <div class="top-bar">
+      <div>
+        <span class="mode-indicator" id="mode-indicator"></span>
+        <div class="progress" id="progress" style="margin:5px 0 0;">Задание 1 из 10</div>
+      </div>
+      <button class="menu-btn exit" onclick="confirmExit()">🏠 В главное меню</button>
+    </div>
+    <div class="problem-text" id="problem-text"></div>
+    <div id="matrix-container"></div>
+
+    <div class="graph-editor">
+      <h3 style="text-align:center; color:#764ba2; margin-bottom:10px;">🎨 Нарисуй схему дорог</h3>
+      <p class="graph-hint" id="graph-hint">Кликните по холсту, чтобы добавить вершину</p>
+      <canvas id="graphCanvas" width="700" height="350"></canvas>
+      <div class="graph-toolbar">
+        <button id="btn-add" class="active" onclick="setGraphMode('add')">➕ Добавить вершину</button>
+        <button id="btn-connect" onclick="setGraphMode('connect')">🔗 Соединить</button>
+        <button id="btn-move" onclick="setGraphMode('move')">✋ Переместить</button>
+        <button id="btn-delete" onclick="setGraphMode('delete')">🗑 Удалить</button>
+        <button class="danger" onclick="clearGraph()">🧹 Очистить</button>
+      </div>
+    </div>
+
+    <div class="answer-section">
+      <input type="number" class="answer-input" id="answer-input" placeholder="Ответ">
+      <button class="submit-btn" id="submit-btn" onclick="checkAnswer()">Ответить</button>
+    </div>
+    <div id="feedback"></div>
+    <div style="text-align:center;" id="action-buttons">
+      <button class="next-btn hidden" id="next-btn" onclick="nextProblem()">Далее →</button>
+      <button class="retry-btn hidden" id="retry-btn" onclick="retryProblem()">🔄 Попробовать ещё раз</button>
+    </div>
+  </div>
+
   <div id="result-screen" class="hidden"></div>
 
+</div>
+
+<div class="modal-overlay" id="exitModal">
+  <div class="modal-box">
+    <h3>⚠️ Выход в главное меню</h3>
+    <p>Вы уверены, что хотите выйти?<br>
+    <b>Прогресс текущего режима будет потерян!</b></p>
+    <div class="modal-buttons">
+      <button class="btn-confirm" onclick="doExit()">Да, выйти</button>
+      <button class="btn-cancel" onclick="closeModal()">Продолжить решение</button>
+    </div>
+  </div>
 </div>
 
 <script>
 // ===== БАЗА ЗАДАЧ =====
 const problems = [
-  // Задача 1
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1}, B:{A:1,C:2,D:2,E:7}, C:{B:2,E:3}, D:{B:2,E:4}, E:{B:7,C:3,D:4}},
-    start:'A', end:'E' },
-  // Задача 2
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:5,C:3}, B:{A:5,C:1,D:4}, C:{A:3,B:1,D:6}, D:{B:4,C:6,E:1}, E:{D:1}},
-    start:'A', end:'E' },
-  // Задача 3
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:3,C:7}, B:{A:3,C:2,E:8}, C:{A:7,B:2,D:4}, D:{C:4,E:1}, E:{B:8,D:1}},
-    start:'A', end:'E' },
-  // Задача 4
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:5,D:1}, B:{A:2,C:3}, C:{A:5,B:3,D:3,E:2}, D:{A:1,C:3}, E:{C:2}},
-    start:'A', end:'E' },
-  // Задача 5
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,D:1}, B:{A:2,C:3,D:3}, C:{B:3,D:3,E:2}, D:{A:1,B:3,C:3}, E:{C:2}},
-    start:'A', end:'E' },
-  // Задача 6
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:3}, B:{A:2,D:3,E:5}, C:{A:3,D:4}, D:{B:3,C:4,E:1}, E:{B:5,D:1}},
-    start:'A', end:'E' },
-  // Задача 7
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:5,F:15}, B:{A:3,C:3}, C:{A:5,B:3,D:5,E:2}, D:{C:5,F:3}, E:{C:2,F:7}, F:{A:15,D:3,E:7}},
-    start:'A', end:'F' },
-  // Задача 8
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:6,C:4,D:2,E:1}, B:{A:6,C:1}, C:{A:4,B:1,D:3,F:1}, D:{A:2,C:3,E:1}, E:{A:1,D:1,F:6}, F:{C:1,E:6}},
-    start:'A', end:'F' },
-  // Задача 9
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:5,C:5,D:4}, B:{A:5,C:2}, C:{A:5,B:2,F:1}, D:{A:4,E:1,F:3}, E:{D:1,F:1}, F:{C:1,D:3,E:1}},
-    start:'A', end:'F' },
-  // Задача 10
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:2,C:5,F:9}, B:{A:2,C:2,D:1,F:5}, C:{A:5,B:2,E:1}, D:{B:1}, E:{C:1,F:1}, F:{A:9,B:5,E:1}},
-    start:'A', end:'F' },
-  // Задача 11
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:7,C:2,D:2,E:5,F:5}, B:{A:7,C:2}, C:{A:2,B:2,D:1}, D:{A:2,C:1,E:1}, E:{A:5,D:1,F:1}, F:{A:5,E:1}},
-    start:'A', end:'F' },
-  // Задача 12
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{C:2,D:1}, B:{C:1,F:3}, C:{A:2,B:1,F:4}, D:{A:1,E:1,F:4}, E:{D:1,F:5}, F:{B:3,C:4,D:4,E:5}},
-    start:'A', end:'F' },
-  // Задача 13
-  { text: "Иван-Царевич спешит выручить Марью-Царевну. Укажите длину самого длинного участка кратчайшего пути от Ивана-Царевича (И) до Марьи-Царевны (М).",
-    nodes: ['А','Б','В','Г','И','М'],
-    edges: {'А':{'В':1,'И':1}, 'Б':{'В':2,'И':1,'М':3}, 'В':{'А':1,'Б':2}, 'Г':{'И':6,'М':1}, 'И':{'А':1,'Б':1,'Г':6,'М':8}, 'М':{'Б':3,'Г':1,'И':8}},
-    start:'И', end:'М', special:'max_edge' },
-  // Задача 14
-  { text: "Учитель живёт на станции Антоновка, работает на станции Дружба. Укажите длину кратчайшего пути от Антоновки до Дружбы.",
-    nodes: ['Антоновка','Васильки','Сельская','Дружба','Ежевика'],
-    edges: {'Антоновка':{'Васильки':1,'Ежевика':1}, 'Васильки':{'Антоновка':1,'Дружба':5}, 'Сельская':{'Дружба':1,'Ежевика':2}, 'Дружба':{'Васильки':5,'Сельская':1,'Ежевика':7}, 'Ежевика':{'Антоновка':1,'Сельская':2,'Дружба':7}},
-    start:'Антоновка', end:'Дружба' },
-  // Задача 15
-  { text: "Коля Иванов живёт в деревне Вершки. Определите минимальное расстояние до школы в Ивановском.",
-    nodes: ['Борки','Вершки','Красное','Дальнее','Дубово','Ивановское'],
-    edges: {'Борки':{'Вершки':5,'Красное':8,'Дальнее':10,'Ивановское':9}, 'Вершки':{'Борки':5,'Дальнее':4,'Дубово':2}, 'Красное':{'Борки':8,'Дубово':1,'Ивановское':3}, 'Дальнее':{'Борки':10,'Вершки':4,'Ивановское':5}, 'Дубово':{'Вершки':2,'Красное':1}, 'Ивановское':{'Борки':9,'Красное':3,'Дальнее':5}},
-    start:'Вершки', end:'Ивановское' },
-  // Задача 16
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:5,D:1}, B:{A:2,C:1}, C:{A:5,B:1,D:3,E:2}, D:{A:1,C:3}, E:{C:2}},
-    start:'A', end:'E' },
-  // Задача 17
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:12,C:2,D:5,E:1}, B:{A:12,C:8,D:1,E:5}, C:{A:2,B:8,D:1}, D:{A:5,B:1,C:1}, E:{A:1,B:5}},
-    start:'A', end:'B' },
-  // Задача 18
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:5,C:1,D:3}, B:{A:5,D:4,E:1}, C:{A:1,E:1}, D:{A:3,B:4,E:1}, E:{B:1,C:1,D:1}},
-    start:'A', end:'B' },
-  // Задача 19
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{C:8,D:10}, B:{D:4,E:1}, C:{A:8,D:1,E:3}, D:{A:10,B:4,C:1}, E:{B:1,C:3}},
-    start:'A', end:'B' },
-  // Задача 20
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и C.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,D:8}, B:{A:2,D:4,E:1}, C:{D:1,E:3}, D:{A:8,B:4,C:1,E:5}, E:{B:1,C:3,D:5}},
-    start:'A', end:'C' },
-  // Задача 21
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:4,D:8,E:3}, B:{A:4,C:1}, C:{B:1,D:2}, D:{A:8,C:2,E:3}, E:{A:3,D:3}},
-    start:'A', end:'D' },
-  // Задача 22
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,D:6}, B:{A:2,C:2,D:8}, C:{B:2,E:2}, D:{A:6,B:8,E:2}, E:{C:2,D:2}},
-    start:'A', end:'E' },
-  // Задача 23
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и C.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:8,D:3}, B:{A:2,C:7}, C:{A:8,B:7,D:9,E:1}, D:{A:3,C:9,E:1}, E:{C:1,D:1}},
-    start:'A', end:'C' },
-  // Задача 24
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,C:5,E:2}, B:{A:1,C:6}, C:{A:5,B:6,D:1,E:7}, D:{C:1,E:6}, E:{A:2,C:7,D:6}},
-    start:'A', end:'D' },
-  // Задача 25
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{C:2,D:1,E:5}, B:{C:2,D:4}, C:{A:2,B:2,D:1,E:4}, D:{A:1,B:4,E:2}, E:{A:5,C:4,D:2}},
-    start:'B', end:'E' },
-  // Задача 26
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:5,C:6,D:10,E:5}, B:{A:5,D:4}, C:{A:6,D:2,E:7}, D:{A:10,B:4,C:2,E:5}, E:{A:5,C:7,D:5}},
-    start:'A', end:'D' },
-  // Задача 27
-  { text: "Между населёнными пунктами A, B, C, D построены дороги. Определите длину кратчайшего пути между пунктами A и C.",
-    nodes: ['A','B','C','D'],
-    edges: {A:{B:2,C:7,D:4}, B:{A:2,C:5,D:1}, C:{A:7,B:5,D:2}, D:{A:4,B:1,C:2}},
-    start:'A', end:'C' },
-  // Задача 28
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:8,C:3}, B:{A:8,D:3}, C:{A:3,E:4,F:3}, D:{B:3,E:1,F:3}, E:{C:4,D:1,F:2}, F:{C:3,D:3,E:2}},
-    start:'A', end:'D' },
-  // Задача 29
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и E.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:6,D:1,E:4}, B:{A:6,C:2,D:5}, C:{B:2,D:2}, D:{A:1,B:5,C:2,E:6}, E:{A:4,D:6}},
-    start:'B', end:'E' },
-  // Задача 30
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:6,E:3}, B:{A:6,C:2,D:5,E:1}, C:{B:2,D:2}, D:{B:5,C:2,E:6}, E:{A:3,B:1,D:6}},
-    start:'A', end:'D' },
-  // Задача 31
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:3,C:5}, B:{A:3,C:1,D:6}, C:{A:5,B:1,D:4,E:1}, D:{B:6,C:4,E:3}, E:{C:1,D:3}},
-    start:'A', end:'D' },
-  // Задача 32
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:1,C:5,F:15}, B:{A:1,C:2}, C:{A:5,B:2,D:1}, D:{C:1,E:2,F:6}, E:{D:2,F:1}, F:{A:15,D:6,E:1}},
-    start:'A', end:'F' },
-  // Задача 33
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами B и C.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:7,F:2}, B:{A:3}, C:{A:7,D:3,E:1}, D:{C:3,E:1,F:2}, E:{C:1,D:1}, F:{A:2,D:2}},
-    start:'B', end:'C' },
-  // Задача 34
-  { text: "Между населёнными пунктами A, B, C, D построены дороги. Определите длину кратчайшего пути между пунктами A и C.",
-    nodes: ['A','B','C','D'],
-    edges: {A:{B:5,C:8,D:3}, B:{A:5,C:2,D:1}, C:{A:8,B:2,D:4}, D:{A:3,B:1,C:4}},
-    start:'A', end:'C' },
-  // Задача 35 (через C)
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт С.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:9,D:4}, B:{A:2,C:3,E:5}, C:{A:9,B:3,D:6,E:10}, D:{A:4,C:6,E:8}, E:{B:5,C:10,D:8}},
-    start:'A', end:'E', through:'C' },
-  // Задача 36 (без повторений)
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,E:1}, B:{A:2,C:5,E:4}, C:{B:5,D:3,E:3}, D:{C:3,E:4}, E:{A:1,B:4,C:3,D:4}},
-    start:'B', end:'D', no_repeat:true },
-  // Задача 37
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{C:1,D:2,E:4}, B:{C:1,D:4}, C:{A:1,B:1,E:1}, D:{A:2,B:4,E:4}, E:{A:4,C:1,D:4}},
-    start:'B', end:'D', no_repeat:true },
-  // Задача 38
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт С.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:4,F:15}, B:{A:3,C:3,D:4}, C:{A:4,B:3,D:1,F:6}, D:{B:4,C:1,E:2,F:6}, E:{D:2,F:1}, F:{A:15,C:6,D:6,E:1}},
-    start:'A', end:'F', through:'C' },
-  // Задача 39
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт С.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:5,F:15}, B:{A:3,C:1,D:4}, C:{A:5,B:1,D:2,F:9}, D:{B:4,C:2,E:3,F:6}, E:{D:3,F:4}, F:{A:15,C:9,D:6,E:4}},
-    start:'A', end:'F', through:'C' },
-  // Задача 40
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:5,C:9,D:6,E:9}, B:{A:5,D:4}, C:{A:9,D:2,E:2}, D:{A:6,B:4,C:2,E:5}, E:{A:9,C:2,D:5}},
-    start:'A', end:'E', through:'D' },
-  // Задача 41
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B, проходящего через пункт D.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:1,D:1}, B:{A:2,C:1}, C:{A:1,B:1,D:2,E:2}, D:{A:1,C:2,E:1}, E:{C:2,D:1}},
-    start:'A', end:'B', through:'D' },
-  // Задача 42
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:4,F:18}, B:{A:3,C:3}, C:{A:4,B:3,D:4}, D:{C:4,E:2,F:6}, E:{D:2,F:1}, F:{A:18,D:6,E:1}},
-    start:'A', end:'F' },
-  // Задача 43
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,C:5,F:15}, B:{A:3,D:4}, C:{A:5,D:2}, D:{B:4,C:2,E:3,F:6}, E:{D:3,F:4}, F:{A:15,D:6,E:4}},
-    start:'A', end:'F' },
-  // Задача 44
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт С. Дважды посещать один пункт нельзя.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,C:4,D:3,E:7}, B:{A:1,C:2,D:5}, C:{A:4,B:2,D:3}, D:{A:3,B:5,C:3,E:2}, E:{A:7,D:2}},
-    start:'A', end:'E', through:'C', no_repeat:true },
-  // Задача 45
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:4}, B:{A:4,C:4,E:1}, C:{B:4,D:1,E:2}, D:{C:1,E:3}, E:{B:1,C:2,D:3}},
-    start:'A', end:'D', no_repeat:true },
-  // Задача 46
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через C. По дороге можно двигаться только один раз.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:2,C:5,F:1}, B:{A:2,C:2,D:2}, C:{A:5,B:2,D:3,E:2,F:9}, D:{B:2,C:3,E:5,F:3}, E:{C:2,D:5,F:4}, F:{A:1,C:9,D:3,E:4}},
-    start:'A', end:'F', through:'C', no_repeat:true },
-  // Задача 47
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E. Каждый пункт посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:5,C:8,D:8,E:12}, B:{A:5,D:4}, C:{A:8,D:7}, D:{A:8,B:4,C:7,E:5}, E:{A:12,D:5}},
-    start:'A', end:'E', no_repeat:true },
-  // Задача 48
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,E:3}, B:{A:2,C:5,D:2,E:4}, C:{B:5,D:1}, D:{B:2,C:1,E:4}, E:{A:3,B:4,D:4}},
-    start:'A', end:'D', no_repeat:true },
-  // Задача 49
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:3,D:4}, B:{A:2,C:1,D:5,E:2}, C:{A:3,B:1,E:5}, D:{A:4,B:5,E:7}, E:{B:2,C:5,D:7}},
-    start:'A', end:'E', no_repeat:true },
-  // Задача 50
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:8,E:5}, B:{A:8,C:3,D:3}, C:{B:3,D:2,E:1}, D:{B:3,C:2}, E:{A:5,C:1}},
-    start:'A', end:'D', no_repeat:true },
-  // Задача 51
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт С. Два раза посещать один пункт нельзя.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:17,C:19}, B:{A:17,C:2,D:2,E:8}, C:{A:19,B:2,D:6}, D:{B:2,C:6,E:1}, E:{B:8,D:1}},
-    start:'A', end:'E', through:'C', no_repeat:true },
-  // Задача 52
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:6,E:8}, B:{A:2,C:3}, C:{A:6,B:3,D:5,E:2}, D:{C:5,E:3}, E:{A:8,C:2,D:3}},
-    start:'A', end:'D', no_repeat:true },
-  // Задача 53
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт B. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:10,D:3}, B:{A:10,D:10,E:2,F:1}, C:{D:2,E:4}, D:{A:3,B:10,C:2,E:4}, E:{B:2,C:4}, F:{B:1}},
-    start:'A', end:'F', through:'B', no_repeat:true },
-  // Задача 54
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт C. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,C:4,D:3,E:7}, B:{A:1,C:2,D:5}, C:{A:4,B:2,D:3}, D:{A:3,B:5,C:3,E:2}, E:{A:7,D:2}},
-    start:'A', end:'E', through:'C', no_repeat:true },
-  // Задача 55
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:2,C:1,D:4,E:8}, B:{A:2,D:5}, C:{A:1,D:2}, D:{A:4,B:5,C:2,E:3}, E:{A:8,D:3}},
-    start:'A', end:'E', no_repeat:true },
-  // Задача 56
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и C. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,D:2}, B:{A:1,D:1,E:2}, C:{D:2,E:1}, D:{A:2,B:1,C:2}, E:{B:2,C:1}},
-    start:'A', end:'C', no_repeat:true },
-  // Задача 57
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,C:1,D:4}, B:{A:1,D:3,E:3}, C:{A:1,D:2,E:1}, D:{A:4,B:3,C:2,E:5}, E:{B:3,C:1,D:5}},
-    start:'A', end:'E', no_repeat:true },
-  // Задача 58
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B, проходящего через пункт E. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{C:6,D:1,E:1}, B:{C:1}, C:{A:6,B:1,D:2,E:2}, D:{A:1,C:2,E:1}, E:{A:1,C:2,D:1}},
-    start:'A', end:'B', through:'E', no_repeat:true },
-  // Задача 59
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B, проходящего через пункт D. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:6,C:4,D:5,E:7}, B:{A:6,C:1,E:3}, C:{A:4,B:1,D:2,E:1}, D:{A:5,C:2,E:1}, E:{A:7,B:3,C:1,D:1}},
-    start:'A', end:'B', through:'D', no_repeat:true },
-  // Задача 60
-  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D, проходящего через пункт B. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E'],
-    edges: {A:{B:1,C:5,E:2}, B:{A:1,C:6}, C:{A:5,B:6,D:1,E:7}, D:{B:6,C:1}, E:{A:2,C:7}},
-    start:'A', end:'D', through:'B', no_repeat:true },
-  // Задача 61
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт E. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:1,C:5,F:15}, B:{A:1,C:2}, C:{A:5,B:2,D:1}, D:{C:1,E:2,F:6}, E:{D:2,F:1}, F:{A:15,D:6,E:1}},
-    start:'A', end:'F', through:'E', no_repeat:true },
-  // Задача 62
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт C. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:3,F:15}, B:{A:3,C:2,D:3,E:7}, C:{B:2,D:1,E:3}, D:{B:3,C:1,E:1}, E:{B:7,C:3,D:1,F:2}, F:{A:15,E:2}},
-    start:'A', end:'F', through:'C', no_repeat:true },
-  // Задача 63
-  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F. Каждый пункт можно посетить только один раз.",
-    nodes: ['A','B','C','D','E','F'],
-    edges: {A:{B:2,C:3,D:7,F:15}, B:{A:2,D:3}, C:{A:3,D:1}, D:{A:7,B:3,C:1,E:2,F:11}, E:{D:2,F:3}, F:{A:15,D:11,E:3}},
-    start:'A', end:'F', no_repeat:true }
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:1}, B:{A:1,C:2,D:2,E:7}, C:{B:2,E:3}, D:{B:2,E:4}, E:{B:7,C:3,D:4}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:5,C:3}, B:{A:5,C:1,D:4}, C:{A:3,B:1,D:6}, D:{B:4,C:6,E:1}, E:{D:1}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:3,C:7}, B:{A:3,C:2,E:8}, C:{A:7,B:2,D:4}, D:{C:4,E:1}, E:{B:8,D:1}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,C:5,D:1}, B:{A:2,C:3}, C:{A:5,B:3,D:3,E:2}, D:{A:1,C:3}, E:{C:2}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,D:1}, B:{A:2,C:3,D:3}, C:{B:3,D:3,E:2}, D:{A:1,B:3,C:3}, E:{C:2}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,C:3}, B:{A:2,D:3,E:5}, C:{A:3,D:4}, D:{B:3,C:4,E:1}, E:{B:5,D:1}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:3,C:5,F:15}, B:{A:3,C:3}, C:{A:5,B:3,D:5,E:2}, D:{C:5,F:3}, E:{C:2,F:7}, F:{A:15,D:3,E:7}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:6,C:4,D:2,E:1}, B:{A:6,C:1}, C:{A:4,B:1,D:3,F:1}, D:{A:2,C:3,E:1}, E:{A:1,D:1,F:6}, F:{C:1,E:6}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:5,C:5,D:4}, B:{A:5,C:2}, C:{A:5,B:2,F:1}, D:{A:4,E:1,F:3}, E:{D:1,F:1}, F:{C:1,D:3,E:1}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:2,C:5,F:9}, B:{A:2,C:2,D:1,F:5}, C:{A:5,B:2,E:1}, D:{B:1}, E:{C:1,F:1}, F:{A:9,B:5,E:1}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:7,C:2,D:2,E:5,F:5}, B:{A:7,C:2}, C:{A:2,B:2,D:1}, D:{A:2,C:1,E:1}, E:{A:5,D:1,F:1}, F:{A:5,E:1}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами А и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{C:2,D:1}, B:{C:1,F:3}, C:{A:2,B:1,F:4}, D:{A:1,E:1,F:4}, E:{D:1,F:5}, F:{B:3,C:4,D:4,E:5}}, start:'A', end:'F' },
+  { text: "Иван-Царевич спешит выручить Марью-Царевну. Укажите длину самого длинного участка кратчайшего пути от Ивана-Царевича (И) до Марьи-Царевны (М).", nodes: ['А','Б','В','Г','И','М'], edges: {'А':{'В':1,'И':1}, 'Б':{'В':2,'И':1,'М':3}, 'В':{'А':1,'Б':2}, 'Г':{'И':6,'М':1}, 'И':{'А':1,'Б':1,'Г':6,'М':8}, 'М':{'Б':3,'Г':1,'И':8}}, start:'И', end:'М', special:'max_edge' },
+  { text: "Учитель живёт на станции Антоновка, работает на станции Дружба. Укажите длину кратчайшего пути от Антоновки до Дружбы.", nodes: ['Антоновка','Васильки','Сельская','Дружба','Ежевика'], edges: {'Антоновка':{'Васильки':1,'Ежевика':1}, 'Васильки':{'Антоновка':1,'Дружба':5}, 'Сельская':{'Дружба':1,'Ежевика':2}, 'Дружба':{'Васильки':5,'Сельская':1,'Ежевика':7}, 'Ежевика':{'Антоновка':1,'Сельская':2,'Дружба':7}}, start:'Антоновка', end:'Дружба' },
+  { text: "Коля Иванов живёт в деревне Вершки. Определите минимальное расстояние до школы в Ивановском.", nodes: ['Борки','Вершки','Красное','Дальнее','Дубово','Ивановское'], edges: {'Борки':{'Вершки':5,'Красное':8,'Дальнее':10,'Ивановское':9}, 'Вершки':{'Борки':5,'Дальнее':4,'Дубово':2}, 'Красное':{'Борки':8,'Дубово':1,'Ивановское':3}, 'Дальнее':{'Борки':10,'Вершки':4,'Ивановское':5}, 'Дубово':{'Вершки':2,'Красное':1}, 'Ивановское':{'Борки':9,'Красное':3,'Дальнее':5}}, start:'Вершки', end:'Ивановское' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами А и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,C:5,D:1}, B:{A:2,C:1}, C:{A:5,B:1,D:3,E:2}, D:{A:1,C:3}, E:{C:2}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.", nodes: ['A','B','C','D','E'], edges: {A:{B:12,C:2,D:5,E:1}, B:{A:12,C:8,D:1,E:5}, C:{A:2,B:8,D:1}, D:{A:5,B:1,C:1}, E:{A:1,B:5}}, start:'A', end:'B' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.", nodes: ['A','B','C','D','E'], edges: {A:{B:5,C:1,D:3}, B:{A:5,D:4,E:1}, C:{A:1,E:1}, D:{A:3,B:4,E:1}, E:{B:1,C:1,D:1}}, start:'A', end:'B' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и B.", nodes: ['A','B','C','D','E'], edges: {A:{C:8,D:10}, B:{D:4,E:1}, C:{A:8,D:1,E:3}, D:{A:10,B:4,C:1}, E:{B:1,C:3}}, start:'A', end:'B' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и C.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,D:8}, B:{A:2,D:4,E:1}, C:{D:1,E:3}, D:{A:8,B:4,C:1,E:5}, E:{B:1,C:3,D:5}}, start:'A', end:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E'], edges: {A:{B:4,D:8,E:3}, B:{A:4,C:1}, C:{B:1,D:2}, D:{A:8,C:2,E:3}, E:{A:3,D:3}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,D:6}, B:{A:2,C:2,D:8}, C:{B:2,E:2}, D:{A:6,B:8,E:2}, E:{C:2,D:2}}, start:'A', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и C.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,C:8,D:3}, B:{A:2,C:7}, C:{A:8,B:7,D:9,E:1}, D:{A:3,C:9,E:1}, E:{C:1,D:1}}, start:'A', end:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E'], edges: {A:{B:1,C:5,E:2}, B:{A:1,C:6}, C:{A:5,B:6,D:1,E:7}, D:{C:1,E:6}, E:{A:2,C:7,D:6}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и E.", nodes: ['A','B','C','D','E'], edges: {A:{C:2,D:1,E:5}, B:{C:2,D:4}, C:{A:2,B:2,D:1,E:4}, D:{A:1,B:4,E:2}, E:{A:5,C:4,D:2}}, start:'B', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E'], edges: {A:{B:5,C:6,D:10,E:5}, B:{A:5,D:4}, C:{A:6,D:2,E:7}, D:{A:10,B:4,C:2,E:5}, E:{A:5,C:7,D:5}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D построены дороги. Определите длину кратчайшего пути между пунктами A и C.", nodes: ['A','B','C','D'], edges: {A:{B:2,C:7,D:4}, B:{A:2,C:5,D:1}, C:{A:7,B:5,D:2}, D:{A:4,B:1,C:2}}, start:'A', end:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:8,C:3}, B:{A:8,D:3}, C:{A:3,E:4,F:3}, D:{B:3,E:1,F:3}, E:{C:4,D:1,F:2}, F:{C:3,D:3,E:2}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и E.", nodes: ['A','B','C','D','E'], edges: {A:{B:6,D:1,E:4}, B:{A:6,C:2,D:5}, C:{B:2,D:2}, D:{A:1,B:5,C:2,E:6}, E:{A:4,D:6}}, start:'B', end:'E' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E'], edges: {A:{B:6,E:3}, B:{A:6,C:2,D:5,E:1}, C:{B:2,D:2}, D:{B:5,C:2,E:6}, E:{A:3,B:1,D:6}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и D.", nodes: ['A','B','C','D','E'], edges: {A:{B:3,C:5}, B:{A:3,C:1,D:6}, C:{A:5,B:1,D:4,E:1}, D:{B:6,C:4,E:3}, E:{C:1,D:3}}, start:'A', end:'D' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:1,C:5,F:15}, B:{A:1,C:2}, C:{A:5,B:2,D:1}, D:{C:1,E:2,F:6}, E:{D:2,F:1}, F:{A:15,D:6,E:1}}, start:'A', end:'F' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами B и C.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:3,C:7,F:2}, B:{A:3}, C:{A:7,D:3,E:1}, D:{C:3,E:1,F:2}, E:{C:1,D:1}, F:{A:2,D:2}}, start:'B', end:'C' },
+  { text: "Между населёнными пунктами A, B, C, D построены дороги. Определите длину кратчайшего пути между пунктами A и C.", nodes: ['A','B','C','D'], edges: {A:{B:5,C:8,D:3}, B:{A:5,C:2,D:1}, C:{A:8,B:2,D:4}, D:{A:3,B:1,C:4}}, start:'A', end:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт С.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,C:9,D:4}, B:{A:2,C:3,E:5}, C:{A:9,B:3,D:6,E:10}, D:{A:4,C:6,E:8}, E:{B:5,C:10,D:8}}, start:'A', end:'E', through:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и D. Каждый пункт можно посетить только один раз.", nodes: ['A','B','C','D','E'], edges: {A:{B:2,E:1}, B:{A:2,C:5,E:4}, C:{B:5,D:3,E:3}, D:{C:3,E:4}, E:{A:1,B:4,C:3,D:4}}, start:'B', end:'D', no_repeat:true },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами B и D. Каждый пункт можно посетить только один раз.", nodes: ['A','B','C','D','E'], edges: {A:{C:1,D:2,E:4}, B:{C:1,D:4}, C:{A:1,B:1,E:1}, D:{A:2,B:4,E:4}, E:{A:4,C:1,D:4}}, start:'B', end:'D', no_repeat:true },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт С.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:3,C:4,F:15}, B:{A:3,C:3,D:4}, C:{A:4,B:3,D:1,F:6}, D:{B:4,C:1,E:2,F:6}, E:{D:2,F:1}, F:{A:15,C:6,D:6,E:1}}, start:'A', end:'F', through:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E, F построены дороги. Определите длину кратчайшего пути между пунктами A и F, проходящего через пункт С.", nodes: ['A','B','C','D','E','F'], edges: {A:{B:3,C:5,F:15}, B:{A:3,C:1,D:4}, C:{A:5,B:1,D:2,F:9}, D:{B:4,C:2,E:3,F:6}, E:{D:3,F:4}, F:{A:15,C:9,D:6,E:4}}, start:'A', end:'F', through:'C' },
+  { text: "Между населёнными пунктами A, B, C, D, E построены дороги. Определите длину кратчайшего пути между пунктами A и E, проходящего через пункт D.", nodes: ['A','B','C','D','E'], edges: {A:{B:5,C:9,D:6,E:9}, B:{A:5,D:4}, C:{A:9,D:2,E:2}, D:{A:6,B:4,C:2,E:5}, E:{A:9,C:2,D:5}}, start:'A', end:'E', through:'D' }
 ];
 
+// ===== ВАРИАНТЫ ТЕСТОВ =====
+// 4 фиксированных варианта по 10 задач каждый
+// Распределение равномерное по сложности и типам
+const testVariants = {
+  1: [0, 6, 12, 16, 22, 28, 32, 34, 37, 39],   // Вариант 1
+  2: [1, 7, 13, 17, 23, 29, 33, 35, 36, 38],   // Вариант 2
+  3: [2, 8, 14, 18, 24, 26, 30, 31, 25, 27],   // Вариант 3
+  4: [3, 9, 15, 19, 20, 21, 4, 5, 10, 11]      // Вариант 4
+};
+
 // ===== АЛГОРИТМЫ =====
-function dijkstra(edges, nodes, start, end, forbidden=null) {
+function dijkstra(edges, nodes, start, end) {
   const dist = {};
   nodes.forEach(n => dist[n] = Infinity);
   dist[start] = 0;
   const visited = {};
   for (let i = 0; i < nodes.length; i++) {
     let u = null;
-    for (const n of nodes) {
-      if (!visited[n] && (u === null || dist[n] < dist[u])) u = n;
-    }
+    for (const n of nodes) if (!visited[n] && (u === null || dist[n] < dist[u])) u = n;
     if (u === null || dist[u] === Infinity) break;
     visited[u] = true;
-    if (edges[u]) {
-      for (const v in edges[u]) {
-        if (forbidden && forbidden.has(v)) continue;
-        const alt = dist[u] + edges[u][v];
-        if (alt < dist[v]) dist[v] = alt;
-      }
+    if (edges[u]) for (const v in edges[u]) {
+      const alt = dist[u] + edges[u][v];
+      if (alt < dist[v]) dist[v] = alt;
     }
   }
   return dist[end];
@@ -613,50 +487,15 @@ function dijkstra(edges, nodes, start, end, forbidden=null) {
 function dfsPath(edges, current, target, visited, currentDist) {
   if (current === target) return currentDist;
   let best = Infinity;
-  if (edges[current]) {
-    for (const next in edges[current]) {
-      if (!visited.has(next)) {
-        visited.add(next);
-        const d = dfsPath(edges, next, target, visited, currentDist + edges[current][next]);
-        if (d < best) best = d;
-        visited.delete(next);
-      }
+  if (edges[current]) for (const next in edges[current]) {
+    if (!visited.has(next)) {
+      visited.add(next);
+      const d = dfsPath(edges, next, target, visited, currentDist + edges[current][next]);
+      if (d < best) best = d;
+      visited.delete(next);
     }
   }
   return best;
-}
-
-function solveProblem(p) {
-  if (p.special === 'max_edge') {
-    // Находим кратчайший путь и возвращаем максимальное ребро на нём
-    const path = findShortestPath(p.edges, p.nodes, p.start, p.end);
-    if (!path) return Infinity;
-    let maxEdge = 0;
-    for (let i = 0; i < path.length - 1; i++) {
-      const w = p.edges[path[i]][path[i+1]];
-      if (w > maxEdge) maxEdge = w;
-    }
-    return maxEdge;
-  }
-  
-  if (p.no_repeat && !p.through) {
-    const visited = new Set([p.start]);
-    return dfsPath(p.edges, p.start, p.end, visited, 0);
-  }
-  
-  if (p.through && p.no_repeat) {
-    // через X без повторений - перебор
-    return dfsThroughNoRepeat(p.edges, p.start, p.end, p.through, p.nodes);
-  }
-  
-  if (p.through) {
-    const d1 = dijkstra(p.edges, p.nodes, p.start, p.through);
-    const d2 = dijkstra(p.edges, p.nodes, p.through, p.end);
-    if (d1 === Infinity || d2 === Infinity) return Infinity;
-    return d1 + d2;
-  }
-  
-  return dijkstra(p.edges, p.nodes, p.start, p.end);
 }
 
 function findShortestPath(edges, nodes, start, end) {
@@ -681,20 +520,19 @@ function findShortestPath(edges, nodes, start, end) {
   return path;
 }
 
-function dfsThroughNoRepeat(edges, start, end, through, nodes) {
-  // Перебор всех путей start -> end без повторений, проходящих через through
+function dfsThroughNoRepeat(edges, start, end, through) {
   let best = Infinity;
-  function dfs(current, target, visited, dist, mustPassThrough, passedThrough) {
+  function dfs(current, target, visited, dist, passedThrough) {
     if (current === target) {
-      if (mustPassThrough && !passedThrough) return Infinity;
+      if (!passedThrough) return Infinity;
       return dist;
     }
     let b = Infinity;
     if (edges[current]) for (const next in edges[current]) {
       if (!visited.has(next)) {
         visited.add(next);
-        const pt = passedThrough || (next === mustPassThrough) || (current === mustPassThrough);
-        const d = dfs(next, target, visited, dist + edges[current][next], mustPassThrough, pt);
+        const pt = passedThrough || (next === through) || (current === through);
+        const d = dfs(next, target, visited, dist + edges[current][next], pt);
         if (d < b) b = d;
         visited.delete(next);
       }
@@ -702,48 +540,288 @@ function dfsThroughNoRepeat(edges, start, end, through, nodes) {
     return b;
   }
   const visited = new Set([start]);
-  const initPT = (start === through);
-  return dfs(start, end, visited, 0, through, initPT);
+  return dfs(start, end, visited, 0, (start === through));
 }
 
+function solveProblem(p) {
+  if (p.special === 'max_edge') {
+    const path = findShortestPath(p.edges, p.nodes, p.start, p.end);
+    if (!path) return Infinity;
+    let maxEdge = 0;
+    for (let i = 0; i < path.length - 1; i++) {
+      const w = p.edges[path[i]][path[i+1]];
+      if (w > maxEdge) maxEdge = w;
+    }
+    return maxEdge;
+  }
+  if (p.no_repeat && !p.through) {
+    const visited = new Set([p.start]);
+    return dfsPath(p.edges, p.start, p.end, visited, 0);
+  }
+  if (p.through && p.no_repeat) {
+    return dfsThroughNoRepeat(p.edges, p.start, p.end, p.through);
+  }
+  if (p.through) {
+    const d1 = dijkstra(p.edges, p.nodes, p.start, p.through);
+    const d2 = dijkstra(p.edges, p.nodes, p.through, p.end);
+    if (d1 === Infinity || d2 === Infinity) return Infinity;
+    return d1 + d2;
+  }
+  return dijkstra(p.edges, p.nodes, p.start, p.end);
+}
+
+// ===== РЕДАКТОР ГРАФА =====
+const canvas = document.getElementById('graphCanvas');
+const ctx = canvas.getContext('2d');
+let graphNodes = [];
+let graphEdges = [];
+let graphMode = 'add';
+let nodeCounter = 0;
+let connectFirst = null;
+let draggingNode = null;
+
+function setGraphMode(mode) {
+  graphMode = mode;
+  connectFirst = null;
+  document.querySelectorAll('.graph-toolbar button').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('btn-' + mode);
+  if (btn) btn.classList.add('active');
+  const hints = {
+    add: 'Кликните по холсту, чтобы добавить вершину',
+    connect: 'Кликните по первой вершине, затем по второй для соединения',
+    move: 'Перетаскивайте вершины мышью',
+    delete: 'Кликните по вершине или ребру, чтобы удалить'
+  };
+  document.getElementById('graph-hint').textContent = hints[mode];
+  drawGraph();
+}
+
+function clearGraph() {
+  graphNodes = []; graphEdges = []; nodeCounter = 0; connectFirst = null;
+  drawGraph();
+}
+
+function getNodeAt(x, y) {
+  for (let i = graphNodes.length - 1; i >= 0; i--) {
+    const n = graphNodes[i];
+    const dx = x - n.x, dy = y - n.y;
+    if (dx*dx + dy*dy <= 22*22) return n;
+  }
+  return null;
+}
+
+function getEdgeAt(x, y) {
+  for (const e of graphEdges) {
+    const dx = e.n2.x - e.n1.x, dy = e.n2.y - e.n1.y;
+    const len2 = dx*dx + dy*dy;
+    if (len2 === 0) continue;
+    let t = ((x - e.n1.x) * dx + (y - e.n1.y) * dy) / len2;
+    t = Math.max(0, Math.min(1, t));
+    const px = e.n1.x + t * dx, py = e.n1.y + t * dy;
+    const d2 = (x-px)*(x-px) + (y-py)*(y-py);
+    if (d2 < 100) return e;
+  }
+  return null;
+}
+
+function drawGraph() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = '#f0f0f0'; ctx.lineWidth = 1;
+  for (let x = 0; x < canvas.width; x += 25) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+  }
+  for (let y = 0; y < canvas.height; y += 25) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+  }
+  for (const e of graphEdges) {
+    ctx.strokeStyle = '#667eea'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(e.n1.x, e.n1.y); ctx.lineTo(e.n2.x, e.n2.y); ctx.stroke();
+    const mx = (e.n1.x + e.n2.x) / 2, my = (e.n1.y + e.n2.y) / 2;
+    ctx.fillStyle = '#fff'; ctx.strokeStyle = '#764ba2'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(mx, my, 16, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#764ba2'; ctx.font = 'bold 14px Segoe UI';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(e.weight, mx, my);
+  }
+  for (const n of graphNodes) {
+    const grad = ctx.createRadialGradient(n.x-5, n.y-5, 2, n.x, n.y, 22);
+    grad.addColorStop(0, '#a78bfa'); grad.addColorStop(1, '#764ba2');
+    ctx.fillStyle = grad;
+    ctx.beginPath(); ctx.arc(n.x, n.y, 22, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 16px Segoe UI';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(n.label, n.x, n.y);
+  }
+  if (connectFirst) {
+    ctx.strokeStyle = '#38ef7d'; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.arc(connectFirst.x, connectFirst.y, 28, 0, Math.PI * 2); ctx.stroke();
+  }
+}
+
+canvas.addEventListener('mousedown', function(e) {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left, y = e.clientY - rect.top;
+  if (graphMode === 'add') {
+    const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЖЗИКЛМНОП';
+    const label = labels[nodeCounter % labels.length];
+    graphNodes.push({ x, y, label });
+    nodeCounter++;
+    drawGraph();
+  } else if (graphMode === 'connect') {
+    const node = getNodeAt(x, y);
+    if (!node) return;
+    if (!connectFirst) {
+      connectFirst = node;
+    } else if (node !== connectFirst) {
+      const weight = prompt('Введите вес ребра (длину дороги):');
+      if (weight !== null && weight !== '') {
+        const w = parseInt(weight);
+        if (!isNaN(w) && w > 0) graphEdges.push({ n1: connectFirst, n2: node, weight: w });
+      }
+      connectFirst = null;
+    }
+    drawGraph();
+  } else if (graphMode === 'move') {
+    const node = getNodeAt(x, y);
+    if (node) draggingNode = node;
+  } else if (graphMode === 'delete') {
+    const node = getNodeAt(x, y);
+    if (node) {
+      graphEdges = graphEdges.filter(e => e.n1 !== node && e.n2 !== node);
+      graphNodes = graphNodes.filter(n => n !== node);
+    } else {
+      const edge = getEdgeAt(x, y);
+      if (edge) graphEdges = graphEdges.filter(e => e !== edge);
+    }
+    drawGraph();
+  }
+});
+
+canvas.addEventListener('mousemove', function(e) {
+  if (graphMode === 'move' && draggingNode) {
+    const rect = canvas.getBoundingClientRect();
+    draggingNode.x = e.clientX - rect.left;
+    draggingNode.y = e.clientY - rect.top;
+    drawGraph();
+  }
+});
+
+canvas.addEventListener('mouseup', function() { draggingNode = null; });
+
 // ===== UI =====
-let currentMode = null; // 'training' or 'test'
+let currentMode = null;
 let currentProblems = [];
 let currentIndex = 0;
 let correctCount = 0;
+let attempts = 0;
 let results = [];
+let studentInfo = { lastname: '', firstname: '', classNum: '', variant: 0 };
+let selectedVariant = 0;
+
+function selectVariant(num) {
+  selectedVariant = num;
+  document.querySelectorAll('.variant-card').forEach(c => c.classList.remove('selected'));
+  document.querySelector(`.variant-card[data-variant="${num}"]`).classList.add('selected');
+}
+
+function showTheory() {
+  hideAllScreens();
+  document.getElementById('theory-screen').classList.remove('hidden');
+}
+
+function showRegistration() {
+  hideAllScreens();
+  document.getElementById('registration-screen').classList.remove('hidden');
+  // Сброс выбора варианта
+  selectedVariant = 0;
+  document.querySelectorAll('.variant-card').forEach(c => c.classList.remove('selected'));
+}
+
+function hideAllScreens() {
+  document.getElementById('menu').classList.add('hidden');
+  document.getElementById('theory-screen').classList.add('hidden');
+  document.getElementById('registration-screen').classList.add('hidden');
+  document.getElementById('problem-screen').classList.add('hidden');
+  document.getElementById('result-screen').classList.add('hidden');
+}
+
+function backToMenu() {
+  hideAllScreens();
+  document.getElementById('menu').classList.remove('hidden');
+}
+
+function confirmExit() {
+  document.getElementById('exitModal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('exitModal').classList.remove('active');
+}
+
+function doExit() {
+  closeModal();
+  currentMode = null;
+  currentProblems = [];
+  currentIndex = 0;
+  correctCount = 0;
+  attempts = 0;
+  results = [];
+  backToMenu();
+}
 
 function startTraining() {
   currentMode = 'training';
   currentProblems = problems.slice(0, 40);
   currentIndex = 0;
   correctCount = 0;
+  attempts = 0;
   results = [];
   showProblem();
 }
 
 function startTest() {
+  const ln = document.getElementById('reg-lastname').value.trim();
+  const fn = document.getElementById('reg-firstname').value.trim();
+  const cls = document.getElementById('reg-class').value;
+  if (!ln || !fn || !cls) {
+    alert('Пожалуйста, заполните все поля (Фамилия, Имя, Класс)!');
+    return;
+  }
+  if (selectedVariant === 0) {
+    alert('Пожалуйста, выберите вариант тестирования!');
+    return;
+  }
+  studentInfo = { lastname: ln, firstname: fn, classNum: cls, variant: selectedVariant };
   currentMode = 'test';
-  // Перемешиваем и берём 10
-  const shuffled = [...problems].sort(() => Math.random() - 0.5);
-  currentProblems = shuffled.slice(0, 10);
+  // Берём задачи для выбранного варианта
+  const variantIndices = testVariants[selectedVariant];
+  currentProblems = variantIndices.map(i => problems[i]);
   currentIndex = 0;
   correctCount = 0;
+  attempts = 0;
   results = [];
   showProblem();
 }
 
 function showProblem() {
-  document.getElementById('menu').classList.add('hidden');
-  document.getElementById('result-screen').classList.add('hidden');
+  hideAllScreens();
   document.getElementById('problem-screen').classList.remove('hidden');
-  
+
+  const modeInd = document.getElementById('mode-indicator');
+  if (currentMode === 'training') {
+    modeInd.className = 'mode-indicator training';
+    modeInd.textContent = '📚 ТРЕНИРОВКА';
+  } else {
+    modeInd.className = 'mode-indicator test';
+    modeInd.textContent = `📝 ВАРИАНТ ${studentInfo.variant}`;
+  }
+
   const p = currentProblems[currentIndex];
-  document.getElementById('progress').textContent = 
+  document.getElementById('progress').textContent =
     `Задание ${currentIndex + 1} из ${currentProblems.length}`;
   document.getElementById('problem-text').textContent = p.text;
-  
-  // Таблица
+
   let html = '<table class="matrix"><tr><th></th>';
   for (const n of p.nodes) html += `<th>${n}</th>`;
   html += '</tr>';
@@ -751,7 +829,7 @@ function showProblem() {
     html += `<tr><td class="header">${row}</td>`;
     for (const col of p.nodes) {
       if (row === col) html += '<td class="empty">—</td>';
-      else if (p.edges[row] && p.edges[row][col] !== undefined) 
+      else if (p.edges[row] && p.edges[row][col] !== undefined)
         html += `<td>${p.edges[row][col]}</td>`;
       else html += '<td class="empty"></td>';
     }
@@ -759,39 +837,80 @@ function showProblem() {
   }
   html += '</table>';
   document.getElementById('matrix-container').innerHTML = html;
-  
-  document.getElementById('answer-input').value = '';
-  document.getElementById('answer-input').focus();
+
+  clearGraph();
+  setGraphMode('add');
+
+  const input = document.getElementById('answer-input');
+  const submitBtn = document.getElementById('submit-btn');
+  input.value = '';
+  input.disabled = false;
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Ответить';
+  input.focus();
+
   document.getElementById('feedback').innerHTML = '';
+  document.getElementById('feedback').className = 'feedback';
   document.getElementById('next-btn').classList.add('hidden');
+  document.getElementById('retry-btn').classList.add('hidden');
 }
 
 function checkAnswer() {
-  const input = document.getElementById('answer-input').value.trim();
-  if (input === '') {
+  const input = document.getElementById('answer-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const inputValue = input.value.trim();
+  if (inputValue === '') {
     alert('Введите ответ!');
     return;
   }
-  const userAnswer = parseInt(input);
+  const userAnswer = parseInt(inputValue);
   const p = currentProblems[currentIndex];
   const correctAnswer = solveProblem(p);
   const isCorrect = (userAnswer === correctAnswer);
-  
-  if (isCorrect) correctCount++;
-  results.push({ problem: p, userAnswer, correctAnswer, isCorrect });
-  
+
+  attempts++;
+
   const fb = document.getElementById('feedback');
-  if (isCorrect) {
-    fb.className = 'feedback correct';
-    fb.innerHTML = `✅ Правильно! Ответ: ${correctAnswer}`;
+
+  if (currentMode === 'test') {
+    input.disabled = true;
+    submitBtn.disabled = true;
+    fb.className = 'feedback accepted';
+    fb.innerHTML = `✅ Ответ принят. Переходите к следующему вопросу.`;
+    if (isCorrect) correctCount++;
+    results.push({ problem: p, userAnswer, correctAnswer, isCorrect });
+
+    document.getElementById('next-btn').classList.remove('hidden');
+    document.getElementById('next-btn').textContent =
+      (currentIndex === currentProblems.length - 1) ? 'Показать результат →' : 'Далее →';
   } else {
-    fb.className = 'feedback wrong';
-    fb.innerHTML = `❌ Неверно. Ваш ответ: ${userAnswer}. Правильный ответ: ${correctAnswer}`;
+    if (isCorrect) {
+      correctCount++;
+      results.push({ problem: p, userAnswer, correctAnswer, isCorrect });
+      fb.className = 'feedback correct';
+      fb.innerHTML = `✅ Правильно! Ответ: ${correctAnswer}`;
+      document.getElementById('next-btn').classList.remove('hidden');
+      document.getElementById('next-btn').textContent =
+        (currentIndex === currentProblems.length - 1) ? 'Показать результат →' : 'Далее →';
+      document.getElementById('retry-btn').classList.add('hidden');
+    } else {
+      fb.className = 'feedback wrong';
+      fb.innerHTML = `❌ Неверно. Ваш ответ: ${userAnswer}. Попробуйте ещё раз!`;
+      document.getElementById('retry-btn').classList.remove('hidden');
+      document.getElementById('next-btn').classList.add('hidden');
+      input.value = '';
+      input.focus();
+    }
   }
-  
-  document.getElementById('next-btn').classList.remove('hidden');
-  document.getElementById('next-btn').textContent = 
-    (currentIndex === currentProblems.length - 1) ? 'Показать результат →' : 'Далее →';
+}
+
+function retryProblem() {
+  const input = document.getElementById('answer-input');
+  input.value = '';
+  input.focus();
+  document.getElementById('feedback').innerHTML = '';
+  document.getElementById('feedback').className = 'feedback';
+  document.getElementById('retry-btn').classList.add('hidden');
 }
 
 function nextProblem() {
@@ -804,10 +923,10 @@ function nextProblem() {
 }
 
 function showResult() {
-  document.getElementById('problem-screen').classList.add('hidden');
+  hideAllScreens();
   const rs = document.getElementById('result-screen');
   rs.classList.remove('hidden');
-  
+
   const total = currentProblems.length;
   const percent = Math.round((correctCount / total) * 100);
   let grade, gradeClass, emoji;
@@ -815,53 +934,77 @@ function showResult() {
   else if (percent >= 75) { grade = 4; gradeClass = 'grade-4'; emoji = '👍'; }
   else if (percent >= 50) { grade = 3; gradeClass = 'grade-3'; emoji = '📚'; }
   else { grade = 2; gradeClass = 'grade-2'; emoji = '💪'; }
-  
+
   let html = `<div class="result-screen">
-    <h1>${emoji} ${currentMode === 'test' ? 'ИТОГОВЫЙ ТЕСТ' : 'ТРЕНИРОВКА'} ЗАВЕРШЕН(А)</h1>
-    <div class="result-grade ${gradeClass}">${grade}</div>
+    <h1>${emoji} ${currentMode === 'test' ? 'ИТОГОВЫЙ ТЕСТ' : 'ТРЕНИРОВКА'} ЗАВЕРШЕН(А)</h1>`;
+
+  // Информация о студенте (для теста)
+  if (currentMode === 'test') {
+    html += `<div class="result-student">
+      👤 <b>${studentInfo.lastname} ${studentInfo.firstname}</b>
+      &nbsp;|&nbsp; 🏫 Класс: <b>${studentInfo.classNum}</b>
+      <span class="variant-badge">📋 Вариант ${studentInfo.variant}</span>
+    </div>`;
+  }
+
+  html += `<div class="result-grade ${gradeClass}">${grade}</div>
     <div class="result-percent">${percent}%</div>
     <div class="stats">
       <div class="stat-box"><div class="num">${correctCount}</div><div class="label">Правильных</div></div>
       <div class="stat-box"><div class="num">${total - correctCount}</div><div class="label">Ошибок</div></div>
       <div class="stat-box"><div class="num">${total}</div><div class="label">Всего заданий</div></div>
-    </div>
-    <div class="result-list">`;
-  
-  results.forEach((r, i) => {
-    const cls = r.isCorrect ? 'ok' : 'fail';
-    const mark = r.isCorrect ? '✓' : '✗';
-    const shortText = r.problem.text.substring(0, 70) + '...';
-    html += `<div class="result-list-item ${cls}">
-      ${mark} <b>№${i+1}:</b> Ваш ответ: ${r.userAnswer} | Верно: ${r.correctAnswer}
-    </div>`;
-  });
-  
-  html += `</div>
-    <button class="menu-btn" onclick="backToMenu()" style="margin-top:30px;">🏠 В главное меню</button>
+      <div class="stat-box attempts"><div class="num">${attempts}</div><div class="label">Попыток</div></div>`;
+
+  if (currentMode === 'test') {
+    html += `<div class="stat-box variant-stat"><div class="num">${studentInfo.variant}</div><div class="label">Вариант</div></div>`;
+  }
+
+  html += `</div>`;
+
+  // Список ответов показываем ТОЛЬКО в тренировке
+  if (currentMode === 'training' && results.length > 0) {
+    html += `<div style="text-align:left; max-width:600px; margin:30px auto; background:#f8f9ff; padding:20px; border-radius:12px;">
+      <h3 style="text-align:center; color:#764ba2;">📋 Детализация ответов</h3>`;
+    results.forEach((r, i) => {
+      const cls = r.isCorrect ? 'background:#d4edda; color:#155724;' : 'background:#f8d7da; color:#721c24;';
+      const mark = r.isCorrect ? '✓' : '✗';
+      html += `<div style="padding:8px 15px; margin:5px 0; border-radius:6px; font-size:1.05em; ${cls}">
+        ${mark} <b>№${i+1}:</b> Ваш ответ: ${r.userAnswer} | Верно: ${r.correctAnswer}
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `<button class="menu-btn" onclick="backToMenu()" style="margin-top:30px;">🏠 В главное меню</button>
   </div>`;
-  
+
   rs.innerHTML = html;
 }
 
-function backToMenu() {
-  document.getElementById('result-screen').classList.add('hidden');
-  document.getElementById('problem-screen').classList.add('hidden');
-  document.getElementById('menu').classList.remove('hidden');
-}
-
-// Enter для проверки ответа
+// Enter для проверки/перехода
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
+    if (document.getElementById('exitModal').classList.contains('active')) return;
     if (!document.getElementById('problem-screen').classList.contains('hidden')) {
       const nextBtn = document.getElementById('next-btn');
+      const retryBtn = document.getElementById('retry-btn');
       if (!nextBtn.classList.contains('hidden')) {
         nextProblem();
+      } else if (!retryBtn.classList.contains('hidden')) {
+        retryProblem();
       } else {
         checkAnswer();
       }
     }
   }
+  if (e.key === 'Escape') closeModal();
 });
+
+document.getElementById('exitModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+drawGraph();
 </script>
 </body>
 </html>
